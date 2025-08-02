@@ -1,0 +1,186 @@
+:root {
+  --fc-today-bg-color: #eaffe6;
+  --fc-button-bg-color: #2c502c;
+  --fc-button-active-bg-color: #1d2f1a;
+  --fc-button-hover-bg-color: #1d2f1a;
+}
+
+.fc-scrollgrid-sync-inner a {
+  color: #234721 !important;
+}
+
+.fc-timegrid-event,
+.fc-daygrid-event {
+  border-radius: 10px;
+}
+
+.fc-event {
+  padding-left: 4px;
+}
+
+.fc-toolbar-title {
+    color: #2c502c;
+}
+
+.calendar-app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5em;
+}
+
+.calendar-people {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.calendar-people .linked-up {
+  font-weight: 700;
+  background-color: #22c716;
+}
+
+.calendar-people .person {
+  color: white;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 20px;
+  margin-left: 10px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-input {
+  font-size: 20px;
+  font-weight: 500;
+  padding: 10px;
+  border-radius: 30px;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content h2 {
+  margin-top: 0;
+}
+
+.modal-content button {
+  margin: 5px;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: end;
+}
+
+.calendarContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Full height of the viewport */
+  width: 100vw; /* Full width of the viewport */
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+.calendarHeader {
+  display: grid;
+  grid-template-columns: 100px repeat(7, 1fr); /* Time labels + 7 days */
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #ddd;
+  width: 100%; /* Ensure it spans the full width */
+}
+
+.calendarDay {
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+  border-left: 1px solid #ddd;
+  overflow: hidden;
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+.calendarBody {
+  display: grid;
+  grid-template-rows: repeat(24, 50px); /* 24 hours */
+  grid-template-columns: 100px repeat(7, 1fr); /* Time labels + 7 days */
+  flex-grow: 1;
+  width: 100%; /* Ensure it spans the full width */
+}
+
+.calendarRow {
+  display: contents; /* Allows rows to inherit grid structure */
+}
+
+.timeLabel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid #ddd;
+  background-color: #f9f9f9;
+  font-size: 12px;
+  font-weight: bold;
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+.calendarCell {
+  border: 1px solid #ddd;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column; /* Stack events vertically */
+  align-items: flex-start;
+  padding: 2px;
+  overflow-y: auto; /* Scroll if too many events */
+  min-width: 0; /* Prevent cells from overflowing */
+}
+
+.calendarCell:hover {
+  background-color: #f0f0f0;
+}
+
+.event {
+  background-color: #4caf50;
+  color: white;
+  padding: 5px;
+  border-radius: 3px;
+  font-size: 12px;
+  text-align: center;
+  margin: 2px 0;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.event:hover {
+  background-color: #f44336;
+}
+
+.addEventButton {
+  grid-column: span 8;
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.addEventButton:hover {
+  background-color: #45a049;
+}

@@ -1,0 +1,60 @@
+.header {
+    margin-top: 3%;
+    font-size: 70px;      /* or 24px */
+    line-height: 0.4;
+    margin-left: 3%;
+    color: black;
+  }
+
+.subheader {
+    font-size: 30px;      /* or 24px */
+    line-height: 0.4;
+    margin-left: 3.5%;
+    color: black;
+}
+
+.desc {
+    font-size: 20px;      /* or 24px */
+    line-height: 1;
+    margin-left: 3.5%;
+    color: black;
+    font-style: italic;
+}
+
+
+.intro-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .text-content {
+    flex: 1;
+    padding-right: 40px;
+  }
+  
+  .hero-image {
+    width: 400px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+  }
+  
+  #highlight {
+    color: #22C716;
+  }
+
+.button {
+  border: 1px solid black;
+
+}
+.button:hover {
+  background-color: #22C716;
+  color: white;
+  border: 1px solid #22C716;
+}
+  
+  
